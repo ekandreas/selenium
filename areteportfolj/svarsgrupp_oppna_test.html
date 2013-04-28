@@ -13,37 +13,37 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/</td>
+	<td>/svarsgrupper/</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=Enkäter</td>
-	<td></td>
+	<td>waitForCondition</td>
+	<td>selenium.isVisible(&quot;ajax-loader-image&quot;) </td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.isVisible(&quot;ajax-loader-image&quot;) </td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Dina enkäter')])[3]</td>
-	<td>3000</td>
+	<td>link=Dina enkäter</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().jQuery.active==0</td>
-	<td>5000</td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>Dina enkäter</td>
-	<td>3000</td>
+	<td>selenium.isVisible(&quot;ajax-loader-image&quot;)==false</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().jQuery.active==0</td>
-	<td>5000</td>
+	<td>selenium.isVisible(&quot;ajax-loader-image&quot;)==false</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=UI-test</td>
+	<td>link=${response_name}</td>
 	<td></td>
 </tr>
 <tr>
