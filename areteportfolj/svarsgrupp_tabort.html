@@ -13,23 +13,13 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/svara/</td>
+	<td>/svarsgrupper/</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>id=minarete_banner_image</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Enkäter</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Dina enkäter')])[3]</td>
-	<td></td>
+	<td>waitForElementPresent</td>
+	<td>id=jqg_aretesurvey_response_group_${survey_id}</td>
+	<td>10000</td>
 </tr>
 <tr>
 	<td>click</td>
