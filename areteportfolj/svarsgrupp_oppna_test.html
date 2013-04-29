@@ -42,19 +42,19 @@
 	<td>10000</td>
 </tr>
 <tr>
+	<td>echo</td>
+	<td>${response_name}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=${response_name}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>css=div.modal-header &gt; h3</td>
-	<td>Svarsgrupp</td>
-</tr>
-<tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().jQuery.active==0</td>
-	<td>5000</td>
+	<td>waitForElementPresent</td>
+	<td>id=response_group_wizard-next-0</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
