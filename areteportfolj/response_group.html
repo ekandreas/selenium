@@ -4,26 +4,163 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://test.areteportfolj.se/" />
-<title>svara</title>
+<title>login</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">svara</td></tr>
+<tr><td rowspan="1" colspan="3">login</td></tr>
 </thead><tbody>
+<!--login-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Din profil</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Logga in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Logga in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=user_login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_login</td>
+	<td>minarete</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>minarete_password</td>
+	<td>minarete_password</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${minarete_password}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_pass</td>
+	<td>${minarete_password}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=wp-submit</td>
+	<td>1000</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Andreas Ek</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Andreas Ek</td>
+	<td></td>
+</tr>
 <tr>
 	<td>open</td>
 	<td>/svarsgrupper/</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=minarete_accordion_174</td>
+	<td>waitForVisible</td>
+	<td>link=Andreas Ek</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Andreas Ek</td>
+	<td></td>
+</tr>
+<!--create response group-->
+<tr>
+	<td>waitForVisible</td>
+	<td>id=create_new_response_group</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=minarete_accordion_174</td>
+	<td>id=create_new_response_group</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=response_group_wizard-next-0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>reponse_name</td>
+	<td>response_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${response_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=this_name</td>
+	<td>${response_name}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=template</td>
+	<td>label=Elev 7-Gy</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=response_group_wizard-next-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=notes</td>
+	<td>Vi testar via UI-test Jenkins och Selenium</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=grade</td>
+	<td>label=Gr3</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=subject</td>
+	<td>label=Engelska</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=total</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=school</td>
+	<td>Testskolan</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=school_type</td>
+	<td>label=Gymnasiet</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=response_group_wizard-next-1</td>
 	<td></td>
 </tr>
 <tr>
@@ -32,7 +169,110 @@
 	<td>access_code</td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>type</td>
+	<td>id=password</td>
+	<td>${access_code}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.icon-arrow-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.icon-arrow-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=start_date</td>
+	<td>2014-06-08</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=button_save</td>
+	<td></td>
+</tr>
+<!--change date-->
+<tr>
+	<td>waitForVisible</td>
+	<td>link=${response_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=${response_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=response_group_wizard-next-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#response_group_wizard-title-1 &gt; span.stepNb</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#response_group_wizard-title-2 &gt; span.stepNb</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>d=new Date( new Date().getFullYear(), new Date().getMonth(), new Date().getDate() );</td>
+	<td>today</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=start_date</td>
+	<td>${today}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=aretesurvey_form_id</td>
+	<td>survey_id</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=button_save</td>
+	<td></td>
+</tr>
+<!--open response group-->
+<tr>
+	<td>waitForVisible</td>
+	<td>id=jqg_aretesurvey_response_group_${survey_id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqg_aretesurvey_response_group_${survey_id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=button_start</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=i.splashy-check</td>
+	<td></td>
+</tr>
+<!--answer survey-->
+<tr>
+	<td>open</td>
+	<td>/svara/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>access_code</td>
+	<td>access_code</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
 	<td>id=surveycode</td>
 	<td></td>
 </tr>
@@ -42,8 +282,13 @@
 	<td>${access_code}</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
+	<td>click</td>
 	<td>css=button.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=tick_img_surveyanswer15</td>
 	<td></td>
 </tr>
 <tr>
@@ -342,7 +587,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>css=div.alert.alert-success</td>
 	<td></td>
 </tr>
@@ -351,6 +596,49 @@
 	<td>css=div.alert.alert-success</td>
 	<td></td>
 </tr>
+<!--remove response group-->
+<tr>
+	<td>open</td>
+	<td>/svarsgrupper/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=jqg_aretesurvey_response_group_${survey_id}</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqg_aretesurvey_response_group_${survey_id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=button_delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Är du säker på att du vill ta bort valda enkäter och all dess data? Detta går inte att ångra!</td>
+	<td></td>
+</tr>
+<!--logout-->
+<tr>
+	<td>click</td>
+	<td>link=Andreas Ek</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Logga ut</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Logga in</td>
+	<td></td>
+</tr>
+<!--end-->
 </tbody></table>
 </body>
 </html>
