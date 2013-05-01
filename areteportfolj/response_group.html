@@ -11,6 +11,17 @@
 <thead>
 <tr><td rowspan="1" colspan="3">login</td></tr>
 </thead><tbody>
+<!--start-->
+<tr>
+	<td>storeEval</td>
+	<td>'UI-TEST'+Math.floor(Math.random()*111111111);</td>
+	<td>response_name</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'ACCESS-'+Math.floor(Math.random()*111111111);</td>
+	<td>access_code</td>
+</tr>
 <!--login-->
 <tr>
 	<td>open</td>
@@ -72,22 +83,12 @@
 	<td>link=Andreas Ek</td>
 	<td></td>
 </tr>
+<!--create response group-->
 <tr>
 	<td>open</td>
 	<td>/svarsgrupper/</td>
 	<td></td>
 </tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>link=Andreas Ek</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>link=Andreas Ek</td>
-	<td></td>
-</tr>
-<!--create response group-->
 <tr>
 	<td>waitForVisible</td>
 	<td>id=create_new_response_group</td>
@@ -102,16 +103,6 @@
 	<td>waitForVisible</td>
 	<td>id=response_group_wizard-next-0</td>
 	<td>10000</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>reponse_name</td>
-	<td>response_name</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${response_name}</td>
-	<td></td>
 </tr>
 <tr>
 	<td>type</td>
@@ -162,11 +153,6 @@
 	<td>click</td>
 	<td>id=response_group_wizard-next-1</td>
 	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>access_code</td>
-	<td>access_code</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -239,6 +225,11 @@
 	<td>id=button_save</td>
 	<td></td>
 </tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>30000</td>
+	<td></td>
+</tr>
 <!--open response group-->
 <tr>
 	<td>waitForVisible</td>
@@ -256,6 +247,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForPageToLoad</td>
+	<td>30000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForVisible</td>
 	<td>css=i.splashy-check</td>
 	<td></td>
@@ -265,11 +261,6 @@
 	<td>open</td>
 	<td>/svara/</td>
 	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>access_code</td>
-	<td>access_code</td>
 </tr>
 <tr>
 	<td>waitForVisible</td>
@@ -635,7 +626,7 @@
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>link=Logga in</td>
+	<td>link=Din profil</td>
 	<td></td>
 </tr>
 <!--end-->
