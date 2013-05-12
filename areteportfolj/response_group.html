@@ -170,16 +170,21 @@
 	<td></td>
 </tr>
 <tr>
+	<td>storeEval</td>
+	<td>d=(new Date().getFullYear()+1) + '-' + (&quot;0&quot; + new Date().getMonth()).slice(-2) + '-' + (&quot;0&quot; + new Date().getDate()).slice(-2)</td>
+	<td>future</td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=start_date</td>
-	<td>2014-06-08</td>
+	<td>${future}</td>
 </tr>
 <tr>
 	<td>click</td>
 	<td>id=button_save</td>
 	<td></td>
 </tr>
-<!--change date-->
+<!--get response group id with open-->
 <tr>
 	<td>waitForVisible</td>
 	<td>link=${response_name}</td>
@@ -192,28 +197,8 @@
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>id=response_group_wizard-next-0</td>
+	<td>id=this_name</td>
 	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=#response_group_wizard-title-1 &gt; span.stepNb</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=#response_group_wizard-title-2 &gt; span.stepNb</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>d=(new Date().getFullYear()+1) + '-' + ("0" + new Date().getMonth()).slice(-2) + '-' + ("0" + new Date().getDate()).slice(-2)</td>
-	<td>today</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=start_date</td>
-	<td>${today}</td>
 </tr>
 <tr>
 	<td>storeValue</td>
@@ -222,12 +207,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=button_save</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForPageToLoad</td>
-	<td>30000</td>
+	<td>link=Avbryt</td>
 	<td></td>
 </tr>
 <!--open response group-->
@@ -616,7 +596,7 @@
 <!--logout-->
 <tr>
 	<td>click</td>
-	<td>id=id=arete_avatar_link-1</td>
+	<td>id=arete_avatar_link-1</td>
 	<td></td>
 </tr>
 <tr>
