@@ -2,23 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e76d4235-f8f3-4f9d-b6df-428206b72603" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cnews/biobusiness.html" afterPath="$PROJECT_DIR$/cnews/5_biobusiness_suite.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cnews/foodnet.html" afterPath="$PROJECT_DIR$/cnews/6_foodnet_suite.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cnews/kemivarldenbiotech.html" afterPath="$PROJECT_DIR$/cnews/4_kemivarldenbiotech_suite.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cnews/magasinetlakaren.html" afterPath="$PROJECT_DIR$/cnews/3_magasinetlakaren_suite.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cnews/papernet.html" afterPath="$PROJECT_DIR$/cnews/1_papernet_suite.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cnews/verkstaderna.html" afterPath="$PROJECT_DIR$/cnews/2_verkstaderna_suite.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cnews/verkstaderna_start.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cnews/2_verkstaderna_suite.html" afterPath="$PROJECT_DIR$/cnews/2_verkstaderna_suite.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="selenium.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="e76d4235-f8f3-4f9d-b6df-428206b72603" time="1371932782561" ignored="false" />
     <file path="/side_links.html" changelist="e76d4235-f8f3-4f9d-b6df-428206b72603" time="1371932923714" ignored="false" />
     <file path="/papernet.html" changelist="e76d4235-f8f3-4f9d-b6df-428206b72603" time="1371933333317" ignored="false" />
-    <file path="/verkstaderna.html" changelist="e76d4235-f8f3-4f9d-b6df-428206b72603" time="1371933174785" ignored="false" />
+    <file path="/verkstaderna.html" changelist="e76d4235-f8f3-4f9d-b6df-428206b72603" time="1371933731928" ignored="false" />
     <file path="/magasinetlakaren.html" changelist="e76d4235-f8f3-4f9d-b6df-428206b72603" time="1371933160413" ignored="false" />
     <file path="/kemivarldenbiotech.html" changelist="e76d4235-f8f3-4f9d-b6df-428206b72603" time="1371933155765" ignored="false" />
     <file path="/biobusiness.html" changelist="e76d4235-f8f3-4f9d-b6df-428206b72603" time="1371933149593" ignored="false" />
     <file path="/papernet_start.html" changelist="e76d4235-f8f3-4f9d-b6df-428206b72603" time="1371933299977" ignored="false" />
+    <file path="/verkstaderna_start.html" changelist="e76d4235-f8f3-4f9d-b6df-428206b72603" time="1371933703854" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,89 +35,7 @@
     <favorites_list name="selenium" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="article.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cnews/article.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1013" selection-end="1013" vertical-scroll-proportion="-28.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comments.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cnews/comments.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="-0.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cnews/footer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="-3.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="papernet_start.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cnews/papernet_start.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search_function.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cnews/search_function.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="-0.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="side_links.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cnews/side_links.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="9" selection-start="363" selection-end="363" vertical-scroll-proportion="-3.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="top_menu.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cnews/top_menu.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="-3.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="top_menu_dropdown.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cnews/top_menu_dropdown.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="-0.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="twitter.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cnews/twitter.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="0.037931036">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -137,7 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/cnews/side_links.html" />
         <option value="$PROJECT_DIR$/cnews/article.html" />
         <option value="$PROJECT_DIR$/cnews/comments.html" />
         <option value="$PROJECT_DIR$/cnews/footer.html" />
@@ -152,6 +67,8 @@
         <option value="$PROJECT_DIR$/cnews/verkstaderna.html" />
         <option value="$PROJECT_DIR$/cnews/papernet_start.html" />
         <option value="$PROJECT_DIR$/cnews/papernet.html" />
+        <option value="$PROJECT_DIR$/cnews/verkstaderna_start.html" />
+        <option value="$PROJECT_DIR$/cnews/2_verkstaderna_suite.html" />
       </list>
     </option>
   </component>
@@ -358,13 +275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cnews/2_verkstaderna_suite.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="48" selection-start="372" selection-end="372" vertical-scroll-proportion="0.077586204">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cnews/1_papernet_suite.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="47" selection-start="513" selection-end="513" vertical-scroll-proportion="0.12931034">
@@ -393,37 +303,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cnews/papernet_start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cnews/search_function.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="-0.625">
+        <state line="5" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="0.012931035">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cnews/side_links.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="9" selection-start="363" selection-end="363" vertical-scroll-proportion="-3.125">
+        <state line="5" column="9" selection-start="363" selection-end="363" vertical-scroll-proportion="0.06465517">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cnews/top_menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="-3.125">
+        <state line="5" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="0.06465517">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cnews/top_menu_dropdown.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="-0.625">
+        <state line="5" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="0.012931035">
           <folding />
         </state>
       </provider>
@@ -431,6 +334,27 @@
     <entry file="file://$PROJECT_DIR$/cnews/twitter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="354" selection-end="354" vertical-scroll-proportion="0.037931036">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cnews/verkstaderna_start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="48" selection-start="591" selection-end="591" vertical-scroll-proportion="0.14224137">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cnews/papernet_start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="707" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cnews/2_verkstaderna_suite.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="60" selection-start="595" selection-end="595" vertical-scroll-proportion="0.14224137">
           <folding />
         </state>
       </provider>
