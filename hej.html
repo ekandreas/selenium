@@ -1,1 +1,74 @@
-hej
+
+# get the btsync software into tmp folder
+sudo mkdir -p /tmp/btsync
+cd /tmp/btsync
+wget http://btsync.s3-website-us-east-1.amazonaws.com/btsync_x64.tar.gz
+tar -xf btsync_x64.tar.gz
+
+# add user and group
+sudo groupadd btsync
+sudo useradd -s /bin/bash -d /home/btsync -m -g btsync btsync
+
+# prepare opt folder for btsync
+mkdir -p /opt/btsync
+mkdir -p /opt/btsync/storage
+chown -R btsync:btsync /opt/btsync
+mkdir -p /opt/btsync/run
+chown root:btsync /opt/btsync/run
+
+# copy btsync to local bin
+mkdir /usr/local/bin
+cp btsync /usr/local/bin
+chmod +x /usr/local/bin/btsync
+
+# create daemon file for start and stop
+sudo nano /etc/init.d/btsync
+
+#!/bin/sh
+logger -s -p daemon.error "$0 $1 executing"
+case "$1" in start)
+logger -s -p daemon.error "trying to start btsync"
+su -c "/usr/local/bin/btsync --config /etc/btsync.conf" -s /bin/sh btsync
+;;
+stop)
+logger -s -p daemon.error "Killing btsync"
+killall btsync
+;;
+*)
+echo "Usage: $0 {start|stop}"
+exit 1
+esac
+logger -s -p daemon.error "$0 $1 done"
+exit 0
+
+# make the daemon file executable
+chmod +x /etc/init.d/btsync
+
+# create config file for btsync
+sudo nano /etc/btsync.conf
+
+# and this content inside:
+{
+"device_name": "areteportfolj.se", //your server name!
+"listening_port" : 0, // 0 - randomize port
+"storage_path" : "/opt/btsync/storage",
+"pid_file" : "/opt/btsync/btsync.pid",
+"check_for_updates" : true,
+"use_upnp" : false, // use UPnP for port mapping
+"download_limit" : 0,
+"upload_limit" : 0,
+"webui" :
+{
+"listen" : "0.0.0.0:8888",
+"login" : "admin", // you have to change this one!
+"password" : "admin" // you have to change this one!
+},
+"disk_low_priority" : false,
+"lan_encrypt_data" : true,
+"lan_use_tcp" : false,
+"rate_limit_local_peers" : false
+}
+
+# create service default and start service now
+update-rc.d btsync defaults
+service btsync start
