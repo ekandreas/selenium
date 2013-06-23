@@ -1,7 +1,7 @@
 
 /* these variables is used inside text cases */
 
-var minarete_password='MINARETE_PASSWORD';
+var minarete_password='PASSWORD';
 
 var reponse_name='UI-TEST'+Math.floor(Math.random()*111111111);
 
