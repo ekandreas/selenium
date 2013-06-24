@@ -6,7 +6,7 @@ class SeleneseTests extends PHPUnit_Extensions_SeleniumTestCase
 
     protected function setUp()
     {
-        $this->setBrowser('*firefox');
+        $this->setBrowser('phantomjs');
         $this->setBrowserUrl('http://minarete.dev/');
     }
 

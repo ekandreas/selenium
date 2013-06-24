@@ -3,20 +3,21 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
 {
   protected function setUp()
   {
-    $this->setBrowser("*firefox");
+    $this->setBrowser("*chrome");
     $this->setBrowserUrl("http://minarete.dev/");
   }
 
   public function testMyTestCase()
   {
     // start
-    $response_name = $this->getEval("'UI-TEST'+Math.floor(Math.random()*111111111);");
-    $access_code = $this->getEval("'ACCESS-'+Math.floor(Math.random()*111111111);");
+    $response_name = "UI-TEST-" . uniqid(); //$this->getEval("'UI-TEST'+Math.floor(Math.random()*111111111);");
+    $access_code = uniqid(); //$this->getEval("'ACCESS-'+Math.floor(Math.random()*111111111);");
+
     // login
     $this->open("/");
     $this->click("link=Din profil");
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("link=Logga in")) break;
         } catch (Exception $e) {}
@@ -25,7 +26,7 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
 
     $this->click("link=Logga in");
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("id=user_login")) break;
         } catch (Exception $e) {}
@@ -33,12 +34,11 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
     }
 
     $this->type("id=user_login", "minarete");
-    $minarete_password = $this->getEval("minarete_password");
-    print($minarete_password . "\n");
+    $minarete_password = "Melker04!"; //$this->getEval("minarete_password");
     $this->type("id=user_pass", $minarete_password);
     $this->click("id=wp-submit");
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("id=arete_avatar_link-1")) break;
         } catch (Exception $e) {}
@@ -53,7 +53,7 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
     // create response group
     $this->open("/svarsgrupper/");
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("id=create_new_response_group")) break;
         } catch (Exception $e) {}
@@ -62,7 +62,7 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
 
     $this->click("id=create_new_response_group");
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("id=response_group_wizard-next-0")) break;
         } catch (Exception $e) {}
@@ -82,13 +82,12 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
     $this->type("id=password", $access_code);
     $this->click("css=i.icon-arrow-right");
     $this->click("css=i.icon-arrow-right");
-    $future = $this->getEval("d=(new Date().getFullYear()) + '-' + (\"0\" + (new Date().getMonth()+1)).slice(-2) + '-' + (\"0\" + (new Date().getDate()+7)).slice(-2)");
-    print($future . "\n");
+    $future = date('Y-m-d'); //$this->getEval("d=(new Date().getFullYear()) + '-' + (\"0\" + (new Date().getMonth()+1)).slice(-2) + '-' + (\"0\" + (new Date().getDate()+7)).slice(-2)");
     $this->type("id=start_date", $future);
     $this->click("id=button_save");
     // get response group id with open
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("link=" . $response_name)) break;
         } catch (Exception $e) {}
@@ -97,7 +96,7 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
 
     $this->click("link=" . $response_name);
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("id=this_name")) break;
         } catch (Exception $e) {}
@@ -108,7 +107,7 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
     $this->click("link=Avbryt");
     // open response group
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("id=jqg_aretesurvey_response_group_" . $survey_id)) break;
         } catch (Exception $e) {}
@@ -119,7 +118,7 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
     $this->click("name=button_start");
     $this->waitForPageToLoad("30000");
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("css=i.splashy-check")) break;
         } catch (Exception $e) {}
@@ -129,7 +128,7 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
     // answer survey
     $this->open("/svara/");
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("id=surveycode")) break;
         } catch (Exception $e) {}
@@ -139,7 +138,7 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
     $this->type("id=surveycode", $access_code);
     $this->click("css=button.btn");
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("id=tick_img_surveyanswer15")) break;
         } catch (Exception $e) {}
@@ -206,7 +205,7 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
     $this->click("id=gender1");
     $this->click("id=button_save");
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("css=div.alert.alert-success")) break;
         } catch (Exception $e) {}
@@ -221,7 +220,7 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
     // remove response group
     $this->open("/svarsgrupper/");
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("id=jqg_aretesurvey_response_group_" . $survey_id)) break;
         } catch (Exception $e) {}
@@ -235,7 +234,7 @@ class Example extends PHPUnit_Extensions_SeleniumTestCase
     $this->click("id=arete_avatar_link-1");
     $this->click("link=Logga ut");
     for ($second = 0; ; $second++) {
-        if ($second >= 60) $this->fail("timeout");
+        if ($second >= 10) $this->fail("timeout");
         try {
             if ($this->isVisible("link=Din profil")) break;
         } catch (Exception $e) {}
