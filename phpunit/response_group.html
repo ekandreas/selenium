@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>login</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">login</td></tr>
+</thead><tbody>
+<!--start-->
+<tr>
+	<td>storeEval</td>
+	<td>'UI-TEST'+Math.floor(Math.random()*111111111);</td>
+	<td>response_name</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'ACCESS-'+Math.floor(Math.random()*111111111);</td>
+	<td>access_code</td>
+</tr>
+<!--login-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Din profil</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Logga in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Logga in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=user_login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_login</td>
+	<td>minarete</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>minarete_password</td>
+	<td>minarete_password</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${minarete_password}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_pass</td>
+	<td>${minarete_password}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=wp-submit</td>
+	<td>1000</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=arete_avatar_link-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=arete_avatar_link-1</td>
+	<td></td>
+</tr>
+<!--create response group-->
+<tr>
+	<td>open</td>
+	<td>/svarsgrupper/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=create_new_response_group</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=create_new_response_group</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=response_group_wizard-next-0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=this_name</td>
+	<td>${response_name}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=template</td>
+	<td>label=Elev 7-Gy</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=response_group_wizard-next-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=notes</td>
+	<td>Vi testar via UI-test Jenkins och Selenium</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=grade</td>
+	<td>label=Gr3</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=subject</td>
+	<td>label=Engelska</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=total</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=school</td>
+	<td>Testskolan</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=school_type</td>
+	<td>label=Gymnasiet</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=response_group_wizard-next-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>${access_code}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.icon-arrow-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.icon-arrow-right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>d=(new Date().getFullYear()) + '-' + (&quot;0&quot; + (new Date().getMonth()+1)).slice(-2) + '-' + (&quot;0&quot; + (new Date().getDate()+7)).slice(-2)</td>
+	<td>future</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${future}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=start_date</td>
+	<td>${future}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=button_save</td>
+	<td></td>
+</tr>
+<!--get response group id with open-->
+<tr>
+	<td>waitForVisible</td>
+	<td>link=${response_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=${response_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=this_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=aretesurvey_form_id</td>
+	<td>survey_id</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Avbryt</td>
+	<td></td>
+</tr>
+<!--open response group-->
+<tr>
+	<td>waitForVisible</td>
+	<td>id=jqg_aretesurvey_response_group_${survey_id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqg_aretesurvey_response_group_${survey_id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=button_start</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>30000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=i.splashy-check</td>
+	<td></td>
+</tr>
+<!--answer survey-->
+<tr>
+	<td>open</td>
+	<td>/svara/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=surveycode</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=surveycode</td>
+	<td>${access_code}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=tick_img_surveyanswer15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer294</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer294</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer93</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer93</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer242</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer242</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer111</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer111</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer22</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer22</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer173</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer173</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer64</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer64</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer85</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer85</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer194</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer194</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer203</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer203</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer122</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer122</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer231</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer231</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer182</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer182</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer73</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer73</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer134</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer134</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer145</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer145</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer285</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer285</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer155</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer155</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer215</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer215</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer224</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer224</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer264</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer264</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer254</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer254</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer164</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer164</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer33</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer33</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer53</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer53</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer103</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer103</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_surveyanswer43</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=surveyanswer43</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tick_img_gender1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gender1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=button_save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=div.alert.alert-success</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.alert.alert-success</td>
+	<td></td>
+</tr>
+<!--remove response group-->
+<tr>
+	<td>open</td>
+	<td>/svarsgrupper/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=jqg_aretesurvey_response_group_${survey_id}</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqg_aretesurvey_response_group_${survey_id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=button_delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Är du säker på att du vill ta bort valda enkäter och all dess data? Detta går inte att ångra!</td>
+	<td></td>
+</tr>
+<!--logout-->
+<tr>
+	<td>click</td>
+	<td>id=arete_avatar_link-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Logga ut</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Din profil</td>
+	<td></td>
+</tr>
+<!--end-->
+</tbody></table>
+</body>
+</html>
