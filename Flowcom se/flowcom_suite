@@ -8,10 +8,11 @@
 <body>
 <table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
 <tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="flowcom_test">flowcom_start</a></td></tr>
 <tr><td><a href="nyheter">nyheter</a></td></tr>
 <tr><td><a href="kontakta_oss">kontakta_oss</a></td></tr>
 <tr><td><a href="search">search</a></td></tr>
-<tr><td><a href="flowcom_test">flowcom_test</a></td></tr>
+<tr><td><a href="technical_Blog _english">technical_Blog _english</a></td></tr>
 </tbody></table>
 </body>
 </html>

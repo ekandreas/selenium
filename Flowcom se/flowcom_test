@@ -37,28 +37,18 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Kontakta oss</td>
+	<td>assertElementPresent</td>
+	<td>id=footer</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertElementPresent</td>
-	<td>//img[@alt='5049b']</td>
+	<td>id=menu-main-menu-2</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertElementPresent</td>
-	<td>link=alla@flowcom.se</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Technical Blog in English</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=site</td>
+	<td>id=footer-message</td>
 	<td></td>
 </tr>
 </tbody></table>
